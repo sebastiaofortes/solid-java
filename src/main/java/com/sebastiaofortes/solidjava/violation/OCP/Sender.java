@@ -1,6 +1,6 @@
-package com.sebastiaofortes.solidjava.violation;
+package com.sebastiaofortes.solidjava.violation.OCP;
 
-public class OpenClosed {
+public class Sender{
 
     public void sendEmails(Email vendas, Email financas) {
         if(vendas.tipo == "HTML"){

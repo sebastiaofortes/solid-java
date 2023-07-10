@@ -32,6 +32,6 @@ class EmailDefault {
 class EmailTxt extends EmailDefault {
     @Override
     public void send(){
-        //senf in txt mode
+        //send in txt mode
     }
 }

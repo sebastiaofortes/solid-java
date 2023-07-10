@@ -3,6 +3,7 @@ package com.sebastiaofortes.solidjava.violation;
 import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class SingleResponsabiliti {
@@ -10,22 +11,16 @@ public class SingleResponsabiliti {
 }
 
 class FuncionarioDao {
-    private Integer id;
-	private String nome;
-	private Double salario;
 	private Connection connection;
 
-	public void salva() throws SQLException{
+	public ResultSet Listar() throws SQLException{
+		// crio a conexao com o banco
 		this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/empresa?useSSL=false", "root", ""); 
 		Statement stmt = this.connection.createStatement();
-		String sql = "insert into funcionario (id, nome, salario) values (" + this.id + "," +
-				this.nome + "," + this.salario + ")";
-		int rs = stmt.executeUpdate(sql);
-		
-		if (rs == 1){
-			System.out.println("Funcionario inserido com sucesso.");
-		}else if (rs == 0){
-			System.out.println("Nenhum funcionario inserido.");
-		}
+		// procuro dados no banco
+		String sql = "SELECT 'name' FROM products";
+		ResultSet rs = stmt.executeQuery(sql);
+		// retorna uma lista de produtos
+		return rs;
 	}
 }
