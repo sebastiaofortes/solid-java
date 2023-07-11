@@ -1,5 +1,7 @@
 package com.sebastiaofortes.solidjava.noviolation.DIP.application;
 
+import com.sebastiaofortes.solidjava.noviolation.DIP.ports.UserRepositoryInterface;
+
 public class EmailService{
 
     private UserRepositoryInterface ur;

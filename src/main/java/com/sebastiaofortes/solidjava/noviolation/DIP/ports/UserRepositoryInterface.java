@@ -1,4 +1,4 @@
-package com.sebastiaofortes.solidjava.noviolation.DIP.application;
+package com.sebastiaofortes.solidjava.noviolation.DIP.ports;
 
 import com.sebastiaofortes.solidjava.noviolation.DIP.domain.User;
 

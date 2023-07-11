@@ -1,8 +1,9 @@
 package com.sebastiaofortes.solidjava.noviolation.DIP.infra;
 
 import java.sql.Connection;
-import com.sebastiaofortes.solidjava.noviolation.DIP.application.UserRepositoryInterface;
+
 import com.sebastiaofortes.solidjava.noviolation.DIP.domain.User;
+import com.sebastiaofortes.solidjava.noviolation.DIP.ports.UserRepositoryInterface;
 
 public class UserRepositoryMock implements UserRepositoryInterface{
     public Connection dbConnection;
