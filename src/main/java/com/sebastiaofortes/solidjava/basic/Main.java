@@ -1,7 +1,7 @@
-package com.sebastiaofortes.solidjava.basics;
+package com.sebastiaofortes.solidjava.basic;
 
-public class UsePessoa {
-    public void Usar(String[] args) {
+public class Main {
+    public static void main(String[] args) {
         // Criando uma instância do tipo "Pessoa"
         Pessoa pessoa1 = new Pessoa("João", 30);
 

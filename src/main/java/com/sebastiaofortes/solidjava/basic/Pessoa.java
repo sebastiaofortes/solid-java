@@ -1,4 +1,4 @@
-package com.sebastiaofortes.solidjava.basics;
+package com.sebastiaofortes.solidjava.basic;
 
 // Definindo um tipo chamado "Pessoa"
 public class Pessoa {
