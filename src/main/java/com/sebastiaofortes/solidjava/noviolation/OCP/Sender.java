@@ -6,12 +6,14 @@ public class Sender {
 
         // Open to extensions of the EmailDefault
         // This implementation can also be done with interfaces
-        //EmailTxt ed = new EmailTxt();
-        //sendAll(ed);
+        EmailTxt ed = new EmailTxt();
+        sendAll(ed);
 
-        for(EmailDefault em : emails){
-                em.send();    
+        /*
+         for(EmailDefault em : emails){
+                em.send();
         }
+        */
     }
 
     public void sendAll(EmailDefault e) {
