@@ -1,15 +1,17 @@
 package com.sebastiaofortes.solidjava.noviolation.ISP;
 
-public class UsuarioLogado implements UsuarioService{
+public class UsuarioLogado implements IUsuario {
 
     @Override
-    public void BuscarProdutos(String nome) {
+    public String BuscarProdutos(String nome) {
         // implementação de código aqui
+        return "product json";
     }
 
     @Override
-    public void AdicionarAoCarrinho(Integer idProduto) {
+    public Boolean AdicionarAoCarrinho(Integer idProduto) {
         // implementação de código aqui
+        return true;
     }
 
     @Override

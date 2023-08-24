@@ -3,13 +3,14 @@ package com.sebastiaofortes.solidjava.violation.ISP;
 public class Visitante implements UsuarioService{
 
     @Override
-    public void BuscarProdutos(String nome) {
+    public String BuscarProdutos(String nome) {
         // implementação de código aqui
+        return "produto json";
     }
 
     @Override
-    public void AdicionarAoCarrinho(Integer idProduto) {
-    
+    public Boolean AdicionarAoCarrinho(Integer idProduto) {
+        return true;
     }
 
     @Override
