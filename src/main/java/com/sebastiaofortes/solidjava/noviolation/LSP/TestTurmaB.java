@@ -7,7 +7,7 @@ import com.sebastiaofortes.solidjava.noviolation.LSP.EscolaB.Aluno;
 import com.sebastiaofortes.solidjava.noviolation.LSP.EscolaB.Turma;
 
 public class TestTurmaB{
-    public static void main(String[] args) {
+    public void test() {
         Aluno aluno1 = new Aluno("João", "A", "M");
         Aluno aluno2 = new Aluno("Maria", "B", "F");
         Aluno aluno3 = new Aluno("Pedro", "C", "M");
@@ -19,29 +19,9 @@ public class TestTurmaB{
 
         Turma turma = new Turma(alunos);
 
-        try {
-            double notaMaria = obterNotaAluno(turma, "Maria");
-            System.out.println("Nota da Maria: " + notaMaria);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-
-        try {
-            double notaPedro = obterNotaAluno(turma, "Pedro");
-            System.out.println("Nota do Pedro: " + notaPedro);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-
-        try {
-            double notaAna = obterNotaAluno(turma, "Ana");
-            System.out.println("Nota da Ana: " + notaAna);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        Secretaria sec = new Secretaria(List.of(turma));
+        String resultado = sec.verificarAluno(0, "Maria");
+        System.out.println(resultado);
     }
 
-    public static double obterNotaAluno(Iturma turma, String nomeAluno) throws Exception {
-        return turma.obterNota(nomeAluno);
-    }
 }

@@ -9,9 +9,9 @@ import com.sebastiaofortes.solidjava.violation.LSP.EscolaA.Turma;
 public class TestTurmaA{
 
     public void Test(String[] args) {
-        Aluno aluno1 = new Aluno("João", "A");
-        Aluno aluno2 = new Aluno("Maria", "B");
-        Aluno aluno3 = new Aluno("Pedro", "C");
+        Aluno aluno1 = new Aluno("João", "5");
+        Aluno aluno2 = new Aluno("Maria", "6");
+        Aluno aluno3 = new Aluno("Pedro", "7");
 
         List<Aluno> alunos = new ArrayList<>();
         alunos.add(aluno1);
@@ -20,39 +20,12 @@ public class TestTurmaA{
 
         Turma turma = new Turma(alunos);
 
-        try {
-            double notaMaria = obterNotaAluno(turma, "Maria");
-            System.out.println("Nota da Maria: " + notaMaria);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        Secretaria sec = new Secretaria();
+        sec.adicionarTurma(turma);
 
-        try {
-            double notaPedro = obterNotaAluno(turma, "Pedro");
-            System.out.println("Nota do Pedro: " + notaPedro);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        String resultado = sec.verificarAluno(0, "Maria");
+        System.out.println(resultado);
 
-        try {
-            double notaAna = obterNotaAluno(turma, "Ana");
-            System.out.println("Nota da Ana: " + notaAna);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
     }
 
-    private double convertToDouble(String input) throws NumberFormatException {
-        try {
-            return Double.parseDouble(input);
-        } catch (NumberFormatException e) {
-            throw new NumberFormatException("Não foi possível converter a string para um número double");
-        }
-    }
-
-    public double obterNotaAluno(Iturma turma, String nomeAluno) throws Exception {
-        String nota = turma.obterNota(nomeAluno);
-        double notaF = this.convertToDouble(nota);
-        return notaF;
-    }
 }

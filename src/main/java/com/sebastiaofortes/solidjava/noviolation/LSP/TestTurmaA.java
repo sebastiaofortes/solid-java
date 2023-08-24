@@ -7,10 +7,10 @@ import com.sebastiaofortes.solidjava.noviolation.LSP.EscolaA.Aluno;
 import com.sebastiaofortes.solidjava.noviolation.LSP.EscolaA.Turma;
 
 public class TestTurmaA{
-    public static void main(String[] args) {
-        Aluno aluno1 = new Aluno("João", "A");
-        Aluno aluno2 = new Aluno("Maria", "B");
-        Aluno aluno3 = new Aluno("Pedro", "C");
+    public void test() {
+        Aluno aluno1 = new Aluno("João", "1");
+        Aluno aluno2 = new Aluno("Maria", "4");
+        Aluno aluno3 = new Aluno("Pedro", "3");
 
         List<Aluno> alunos = new ArrayList<>();
         alunos.add(aluno1);
@@ -19,29 +19,10 @@ public class TestTurmaA{
 
         Turma turma = new Turma(alunos);
 
-        try {
-            double notaMaria = obterNotaAluno(turma, "Maria");
-            System.out.println("Nota da Maria: " + notaMaria);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        Secretaria sec = new Secretaria(List.of(turma));
+        String resultado = sec.verificarAluno(0, "Maria");
+        System.out.println(resultado);
 
-        try {
-            double notaPedro = obterNotaAluno(turma, "Pedro");
-            System.out.println("Nota do Pedro: " + notaPedro);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-
-        try {
-            double notaAna = obterNotaAluno(turma, "Ana");
-            System.out.println("Nota da Ana: " + notaAna);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
     }
 
-    public static double obterNotaAluno(Iturma turma, String nomeAluno) throws Exception {
-        return turma.obterNota(nomeAluno);
-    }
 }
