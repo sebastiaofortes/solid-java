@@ -1,13 +1,13 @@
-package com.sebastiaofortes.solidjava.violation.LSP.EscolaB;
+package com.sebastiaofortes.solidjava.violation.LSP.EscolaA;
 
 import java.util.List;
 
 import com.sebastiaofortes.solidjava.violation.LSP.Iturma;
 
-public class Turma implements Iturma{
+public class TurmaA implements Iturma{
     private List<Aluno> alunos;
 
-    public Turma(List<Aluno> alunos) {
+    public TurmaA(List<Aluno> alunos) {
         this.alunos = alunos;
     }
 

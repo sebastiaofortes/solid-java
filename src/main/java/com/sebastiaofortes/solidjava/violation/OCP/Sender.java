@@ -2,24 +2,15 @@ package com.sebastiaofortes.solidjava.violation.OCP;
 
 public class Sender{
 
-    public void sendEmails(Email vendas, Email financas) {
-        if(vendas.tipo == "HTML"){
-            vendas.sendHtmlEmail();
-        }
-        else {
-            vendas.sendTxtEmail();
-        }
+    public void sendEmails(HTMLEmail vendas, TxtEmail financas) {
 
-        if(financas.tipo == "HTML"){
-            financas.sendHtmlEmail();
-        }
-        else {
-            financas.sendTxtEmail();
-        }
+        vendas.sendTxtEmail();
+        financas.sendTxtEmail();
+
     }
 }
 
-class Email {
+class HTMLEmail {
     public String tipo;
     public String corpo;
     public String destinatario;
@@ -30,5 +21,19 @@ class Email {
 
     public void sendTxtEmail(){
         
+    }
+}
+
+class TxtEmail {
+    public String tipo;
+    public String corpo;
+    public String destinatario;
+
+    public void sendHtmlEmail(){
+
+    }
+
+    public void sendTxtEmail(){
+
     }
 }

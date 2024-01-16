@@ -1,10 +1,10 @@
 package com.sebastiaofortes.solidjava.violation.LSP;
 
+import com.sebastiaofortes.solidjava.violation.LSP.EscolaA.Aluno;
+import com.sebastiaofortes.solidjava.violation.LSP.EscolaA.TurmaA;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import com.sebastiaofortes.solidjava.violation.LSP.EscolaA.Aluno;
-import com.sebastiaofortes.solidjava.violation.LSP.EscolaA.Turma;
 
 public class TestTurmaA{
 
@@ -18,13 +18,13 @@ public class TestTurmaA{
         alunos.add(aluno2);
         alunos.add(aluno3);
 
-        Turma turma = new Turma(alunos);
+        TurmaA turma = new TurmaA(alunos);
 
         Secretaria sec = new Secretaria();
         sec.adicionarTurma(turma);
 
         String resultado = sec.verificarAluno(0, "Maria");
-        System.out.println(resultado);
+        System.out.println("TurmaA: "+resultado);
 
     }
 

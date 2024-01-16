@@ -4,10 +4,10 @@ import java.util.List;
 
 import com.sebastiaofortes.solidjava.noviolation.LSP.Iturma;
 
-public class Turma implements Iturma{
+public class TurmaA implements Iturma{
     private List<Aluno> alunos;
 
-    public Turma(List<Aluno> alunos) {
+    public TurmaA(List<Aluno> alunos) {
         this.alunos = alunos;
     }
 

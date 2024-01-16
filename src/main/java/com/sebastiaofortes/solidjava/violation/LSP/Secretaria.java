@@ -28,7 +28,7 @@ public class Secretaria{
         try {
             return Double.parseDouble(nota);
         } catch (NumberFormatException e) {
-            throw new Exception("Erro na conversão da nota: " + e.getMessage());
+            throw new Exception("[Secretaria:converterNota] Erro na conversão: " + e.getMessage());
         }
     }
 }

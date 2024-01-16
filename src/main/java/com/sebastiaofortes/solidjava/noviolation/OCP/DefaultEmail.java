@@ -1,6 +1,6 @@
 package com.sebastiaofortes.solidjava.noviolation.OCP;
 
-public class EmailDefault {
+public class DefaultEmail {
     public String tipo;
     public String corpo;
     public String destinatario;

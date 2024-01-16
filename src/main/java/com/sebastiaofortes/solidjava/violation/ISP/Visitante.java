@@ -10,6 +10,7 @@ public class Visitante implements UsuarioService{
 
     @Override
     public Boolean AdicionarAoCarrinho(Integer idProduto) {
+        // implementação de código aqui
         return true;
     }
 

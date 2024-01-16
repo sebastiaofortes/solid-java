@@ -1,10 +1,10 @@
 package com.sebastiaofortes.solidjava.noviolation.LSP;
 
+import com.sebastiaofortes.solidjava.noviolation.LSP.EscolaB.Aluno;
+import com.sebastiaofortes.solidjava.noviolation.LSP.EscolaB.TurmaB;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import com.sebastiaofortes.solidjava.noviolation.LSP.EscolaB.Aluno;
-import com.sebastiaofortes.solidjava.noviolation.LSP.EscolaB.Turma;
 
 public class TestTurmaB{
     public void test() {
@@ -17,11 +17,11 @@ public class TestTurmaB{
         alunos.add(aluno2);
         alunos.add(aluno3);
 
-        Turma turma = new Turma(alunos);
+        TurmaB turma = new TurmaB(alunos);
 
         Secretaria sec = new Secretaria(List.of(turma));
         String resultado = sec.verificarAluno(0, "Maria");
-        System.out.println(resultado);
+        System.out.println("TurmaB: "+resultado);
     }
 
 }

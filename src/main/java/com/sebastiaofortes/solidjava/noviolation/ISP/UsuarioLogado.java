@@ -1,6 +1,6 @@
 package com.sebastiaofortes.solidjava.noviolation.ISP;
 
-public class UsuarioLogado implements IUsuario {
+public class UsuarioLogado implements IUsuario, IVisitante {
 
     @Override
     public String BuscarProdutos(String nome) {

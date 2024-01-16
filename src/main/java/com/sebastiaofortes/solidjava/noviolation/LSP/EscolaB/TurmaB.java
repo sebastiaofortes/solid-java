@@ -6,10 +6,10 @@ import java.util.Map;
 
 import com.sebastiaofortes.solidjava.noviolation.LSP.Iturma;
 
-public class Turma implements Iturma{
+public class TurmaB implements Iturma{
     private List<Aluno> alunos;
 
-    public Turma(List<Aluno> alunos) {
+    public TurmaB(List<Aluno> alunos) {
         this.alunos = alunos;
     }
 

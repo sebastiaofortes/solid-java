@@ -1,6 +1,6 @@
 package com.sebastiaofortes.solidjava.noviolation.OCP;
 
-public class EmailTxt extends EmailDefault {
+public class HTMLEmail extends DefaultEmail {
     @Override
     public void send(){
         //send in txt mode
