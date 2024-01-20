@@ -24,7 +24,7 @@ public class TestTurmaA{
         sec.adicionarTurma(turma);
 
         String resultado = sec.verificarAluno(0, "Maria");
-        System.out.println("TurmaA: "+resultado);
+        System.out.println("Teste TurmaA: "+resultado);
 
     }
 

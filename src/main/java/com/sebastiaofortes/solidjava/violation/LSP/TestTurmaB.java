@@ -23,6 +23,6 @@ public class TestTurmaB{
         sec.adicionarTurma(turma);
 
         String resultado = sec.verificarAluno(0, "Maria");
-        System.out.println("TurmaB: "+resultado);
+        System.out.println("Teste TurmaB: "+resultado);
     }
 }

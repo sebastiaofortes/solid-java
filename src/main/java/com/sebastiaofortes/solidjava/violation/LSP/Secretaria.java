@@ -15,7 +15,7 @@ public class Secretaria{
             String nota = turmas.get(t).obterNota(aluno);
             double aprovado = converterNota(nota);
             if (aprovado >= 6.0) {
-                return "O aluno foi aprovado.";
+                return "O aluno "+aluno+" foi aprovado.";
             } else {
                 return "O aluno não foi aprovado.";
             }

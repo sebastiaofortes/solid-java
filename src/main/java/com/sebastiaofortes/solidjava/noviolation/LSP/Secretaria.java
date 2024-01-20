@@ -13,9 +13,9 @@ public class Secretaria {
         try {
             double nota = turmas.get(t).obterNota(aluno);
             if (nota >= 6.0) {
-                return "O aluno foi aprovado.";
+                return "O aluno "+aluno+" foi aprovado.";
             } else {
-                return "O aluno não foi aprovado.";
+                return "O aluno "+aluno+" não foi aprovado.";
             }
         } catch (Exception e) {
             return e.getMessage();
